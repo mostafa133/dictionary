@@ -11,3 +11,15 @@ def printDictionary(**kwargs):
         print(f'key: {k} value: {v}')
 printDictionary()
 printDictionary(name= 'mostafa', age=27, city= 'kawkab')
+
+'''**args+ tuple'''
+להדפיס את המספרים רק שמופיעים פעם אחת ברשימה
+def getuniqueTuple(*args):
+    l1= []
+    for n in args:
+        if args.count(n)==1:
+            l1.append(n)
+
+    return tuple(l1)
+
+print(getuniqueTuple(88,88,9,9,6,8))
